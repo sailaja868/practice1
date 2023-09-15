@@ -1,0 +1,7 @@
+systemctl list-units --type=service
+systemctl list-units --type=service --all
+ systemctl list-unit-files --type=service
+systemctl status sshd.service
+systemctl is-active sshd.service
+systemctl is-enabled sshd.service
+ systemctl is-failed sshd.service

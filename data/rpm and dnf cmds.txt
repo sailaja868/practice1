@@ -1,0 +1,51 @@
+     rpm cmds
+	 
+rpm -qf /etc/yum.repos.d
+rpm -q dnf
+ rpm -ql dnf
+rpm -qc openssh-clients
+rpm -qd openssh-clients
+rpm -q --scripts openssh-server
+rpm -q --changelog audit
+ls -l podman-4.0.0-6.el9.x86_64.rpm
+rpm -qlp podman-4.0.0-6.el9.x86_64.rpm
+rpm -ivh podman-4.0.0-6.el9.x86_64.rpm 
+rpm2cpio wonderwidgets-1.0-4.x86_64.rpm | cpio -id
+rpm2cpio wonderwidgets-1.0-4.x86_64.rpm | cpio -id "*txt"
+ls -l usr/share/doc/wonderwidgets-1.0/
+lab start software-rpm
+ssh student@servera
+rpm -q -p rhcsa-script-1.0.0-1.noarch.rpm -i
+rpm -q -p rhcsa-script-1.0.0-1.noarch.rpm -l
+rpm -q -p rhcsa-script-1.0.0-1.noarch.rpm --scripts
+rpm2cpio rhcsa-script-1.0.0-1.noarch.rpm | cpio -tv
+rpm2cpio rhcsa-script-1.0.0-1.noarch.rpm | cpio -idv
+ls -lR opt
+sudo rpm -ivh rhcsa-script-1.0.0-1.noarch.rpm
+rpm -q rhcsa-script
+exit
+ssh student@servera
+exit
+lab finish software-rpm
+
+
+
+   DNF cmds
+   
+ls -l /bin/ | grep yum | awk '{print $9 " " $10 " " $11}'
+dnf list 'http*'
+dnf search all 'web server'
+dnf info httpd
+ dnf provides /var/www/html
+ dnf install httpd
+ dnf update
+ dnf list kernel
+ dnf remove httpd
+ dnf group list
+ dnf group info "RPM Development Tools"
+  dnf group install "RPM Development Tools"
+  tail -5 /var/log/dnf.rpm.log
+  dnf history
+  dnf history undo 6
+
+   
